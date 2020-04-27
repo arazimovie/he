@@ -23,7 +23,7 @@ main {
 nav {
     margin: 0px;
     background-color: #fff;
-    position: sticky;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;

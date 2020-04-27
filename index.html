@@ -8,6 +8,9 @@
     <title>אין לי זמן למות - חייו של יהודה ארזי</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript'>
+        window.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, false);
         function scrollActivate(id){
             document.getElementById(id).scrollIntoView({behavior: 'smooth'},50);
         };
