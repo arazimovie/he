@@ -11,17 +11,18 @@
         window.addEventListener('touchmove', function(e) {
             e.preventDefault();
         }, false);
-        function scrollActivate(id){
-            document.getElementById(id).scrollIntoView({behavior: 'smooth'},50);
+        function scrollActivate(amount){
+            let percent=document.getElementById('top').clientHeight/100;
+            document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
     </script>
 </head>
 <body dir='rtl'>
     <nav>
         <div class='links'>
-            <div class='link' onclick='scrollActivate("top")'>חזרה למעלה</div>
-            <div class='link' onclick='scrollActivate("trailer")'>לצפייה בטריילר</div>
-            <div class='link' onclick='scrollActivate("about")'>על הסרט</div>
+            <div class='link' onclick='scrollActivate(0)'>חזרה למעלה</div>
+            <div class='link' onclick='scrollActivate(50)'>לצפייה בטריילר</div>
+            <div class='link' onclick='scrollActivate(120)'>על הסרט</div>
             <div class='link' href='#contact'>צור קשר</div>
         </div>
     </nav>
