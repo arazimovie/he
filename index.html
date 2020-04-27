@@ -1,18 +1,38 @@
-<style>
-    nav {
-    	background-color: #fff;
-    	position: relative;
-    	display: flex;
-    	justify-content: space-between;
-    	align-items: center;
-    	padding: 10px 20px;
-    	box-shadow: 0 0.125rem 0.25rem #ccc;
-    }
-</style>
+<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<nav>
-    <a href='#top'>חזרה למעלה</a>
-    <a href='#trailer'>לצפייה בטריילר</a>
-    <a href='#about'>על הסרט</a>
-    <a href='#contact'>צור קשר</a>
-</nav>
+    <title>אין לי זמן למות - חייו של יהודה ארזי</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript'>
+        function scrollActivate(id){
+            document.getElementById(id).scrollIntoView({behavior: 'smooth'},50);
+        };
+    </script>
+</head>
+<body dir='rtl'>
+    <nav>
+        <div class='links'>
+            <a onclick='scrollActivate("top")'>חזרה למעלה</a>
+            <a onclick='scrollActivate("trailer")'>לצפייה בטריילר</a>
+            <a onclick='scrollActivate("about")'>על הסרט</a>
+            <a href='#contact'>צור קשר</a>
+        </div>
+    </nav>
+    <main>
+        <img id='top' class='banner' src='banner.jpg'></img>
+        <img class='bannerText' src='banner-text.png'></img>
+        <a id='trailer' name='trailer'></a>
+        <iframe class='video' src="https://drive.google.com/file/d/1mLzm4CKGrE-SBduEKOjvTOg5-F1pP-i3/preview"></iframe>
+        <div class='content'>
+            <h1 id='about'>על הסרט</h1>
+            <div class='text'>
+                text text text
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Varela';
+    src: url('VarelaRound-Regular.ttf') format('truetype');
+}
+
+html {
+    font-size: 1.3rem;
+}
+
+body, main {
+    font-family: Varela;
+    font-weight:normal;
+    font-style:normal;
+    margin: 0 auto;
+    background-color: #FFFDF5;
+}
+body {
+    overflow: hidden;
+}
+main {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 92vh;
+}
+nav {
+    margin: 0px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 8vh;
+    box-shadow: 0 0.125rem 0.5rem #ccc;
+    z-index: 1;
+}
+h1 {
+    color: #B02121;
+    letter-spacing: 0.3rem;
+    font-size: 2rem;
+}
+.links {
+    margin-right: 13vw;
+}
+.links a {
+    padding: 2rem;
+}
+a {
+    color: #B02121;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #788764;
+}
+.banner{
+    width: 100vw;
+    z-index: 2;
+}
+.bannerText {
+    position: absolute;
+    top: 35vh;
+    right: 20vw;
+    width: 35vw;
+    z-index: 1;
+}
+#trailer {
+    position: absolute;
+    top: 65%;
+}
+.video {
+    position: absolute;
+    top: 90%;
+    right: 22vw;
+    width: 30vw;
+    height: 20vw;
+}
+.content {
+    position: static;
+    padding-top: 33vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text {
+    height: 500px;
+}
