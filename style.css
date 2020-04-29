@@ -63,6 +63,17 @@ h1 {
     background-image: url(banner.jpg);
     background-size: 100vw;
 }
+
+@media only screen and (max-width: 768px) {
+    .banner{
+        width: 100vw;
+        height: 216vw;
+        background-image: url(banner-long.jpeg);
+    }
+    .bannerText{
+        display: none;
+    }
+}
 .bannerText {
     position: relative;
     top: 15vw;
