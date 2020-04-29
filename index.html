@@ -8,11 +8,12 @@
     <title>אין לי זמן למות - חייו של יהודה ארזי</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript'>
+        var mobile = window.innerWidth<=768;
         window.addEventListener('touchmove', function(e) {
             e.preventDefault();
         }, false);
         function scrollActivate(amount){
-            if(window.innerWidth<=768) amount=amount+30;
+            if(mobile) amount=amount+30;
             let percent=document.getElementById('top').clientHeight/100;
             document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
@@ -21,7 +22,8 @@
 <body dir='rtl'>
     <nav>
         <div class='links'>
-            <div class='link' onclick='scrollActivate(0)'>חזרה למעלה</div>
+            <div id='up' class='link' onclick='scrollActivate(0)'>חזרה למעלה</div>
+            <script>if(mobile) document.getElementById('up').style.display='none';</script>
             <div class='link' onclick='scrollActivate(50)'>לצפייה בטריילר</div>
             <div class='link' onclick='scrollActivate(120)'>על הסרט</div>
             <div class='link' href='#contact'>צור קשר</div>

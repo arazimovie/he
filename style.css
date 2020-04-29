@@ -43,9 +43,6 @@ h1 {
     flex-flow: wrap;
     margin-right: 20vw;
 }
-@media only screen and (max-width: 768px) {
-    .links{ margin-right: 0; }
-}
 .link {
     color: #B02121;
     text-decoration: none;
@@ -70,10 +67,6 @@ h1 {
     right: 20vw;
     width: 35vw;
     z-index: 1;
-}
-#trailer {
-    position: absolute;
-    top: 65%;
 }
 .video {
     position: absolute;
@@ -104,12 +97,13 @@ h1 {
         display: none;
     }
     .video {
-        bottom: -20vh;
+        bottom: -15vh;
         right: 10vw;
         width: 70vw;
         height: 40vw;
     }
-    #trailer {
-        top: 100%;
+    .links{
+        margin-right: 0;
+        width: 100%;
     }
 }
