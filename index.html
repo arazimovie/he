@@ -12,6 +12,7 @@
             e.preventDefault();
         }, false);
         function scrollActivate(amount){
+            if(window.innerWidth<=768) amount=amount+30;
             let percent=document.getElementById('top').clientHeight/100;
             document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
