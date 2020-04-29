@@ -13,7 +13,7 @@
             e.preventDefault();
         }, false);
         function scrollActivate(amount){
-            if(mobile) amount=amount+30;
+            if(mobile && amount===50) amount=80;
             let percent=document.getElementById('top').clientHeight/100;
             document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
