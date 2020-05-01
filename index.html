@@ -13,7 +13,7 @@
             e.preventDefault();
         }, false);
         function scrollActivate(amount){
-            if(mobile && amount===50) amount=80;
+            if(mobile) amount=amount+20;
             let percent=document.getElementById('top').clientHeight/100;
             document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
@@ -36,9 +36,13 @@
             <iframe class='video' src="https://drive.google.com/file/d/1mLzm4CKGrE-SBduEKOjvTOg5-F1pP-i3/preview"></iframe>
         </div>
         <div class='content'>
+            <hr style='width: 100px;'>
             <h1 id='about'>על הסרט</h1>
             <div class='text'>
-                text text text
+                <p>שישים שנה חלפו מאז אמר בן-גוריון: <b>"אם צה״ל עמד בנצחון במלחמת הקוממיות, מעטים נגד מרובים, יש ליהודה ארזי חלק לא קטן בפלא-אדירים זה״</b>. דמותו של ארזי נמוגה מהזיכרון הקולקטיבי, ונותרה שמורה בארכיונים.</p>
+                <p><b>יהודה ארזי</b> היה מגוייס כל כולו לרכש ולהעפלה. כמחצית מכמות הנשק שהיתה לכוחותנו במלחמת השחרור הגיעה דרכו. הוא הוציא מאיטליה 20 ספינות מעפילים ועליהן כ26,000 יהודים משארית הפליטה.</p>
+                <p>ארזי היה גבר יפה תואר, ואמיץ באופן יוצא דופן.  מלך התחבולות, הוא פעל תמיד על פי צו מצפונו ולא נכנע להוראות הממונים עליו. סיפורו האישי הוא גם סיפורה של הקמת המדינה שבדרך. סיפור שאין דומה לו בהיסטוריית העמים: עם קם לתחייה וחוזר למולדתו לאחר 2000 שנות גלות.</p>
+                <p>"אין לי זמן למות" ינסה להחיות את קולו של ארזי, שהונצח ב1949 בעדויות  שמסרו הוא וחבריו ל"הגנה" ונשתמרו בארכיונים.</p>
             </div>
         </div>
     </main>

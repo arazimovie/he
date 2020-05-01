@@ -71,8 +71,8 @@ h1 {
 .video {
     position: absolute;
     bottom: -7vh;
-    right: 22vw;
-    width: 30vw;
+    right: 20vw;
+    width: 35vw;
     height: 20vw;
 }
 .content {
@@ -83,7 +83,12 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+.content hr {
+    position: relative;
+    top: -2.5rem;
+}
 .text {
+    width: 50vw;
     height: 500px;
 }
 
@@ -97,14 +102,17 @@ h1 {
         display: none;
     }
     .video {
-        bottom: -15vh;
-        right: 10vw;
-        width: 70vw;
-        height: 40vw;
+        bottom: -30vh;
+        right: 0;
+        width: 100vw;
+        height: 60vw;
     }
     .links{
         margin-right: 0;
         width: 100%;
         justify-content: space-around;
+    }
+    .text {
+        width: 80vw;
     }
 }
