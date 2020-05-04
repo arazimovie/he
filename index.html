@@ -17,23 +17,30 @@
             let percent=document.getElementById('top').clientHeight/100;
             document.getElementsByTagName('main')[0].scrollTo({top: percent*amount, behavior: 'smooth'});
         };
+        function updateLinks(){
+            /*let links=document.getElementById('links').children,
+                amount=document.getElementsByTagName('main')[0].scrollTop,
+                coordinates=[0,50,120],
+                set=0;
+            for(c in coordinates) if(amount>=coordinates[c]) set=c;*/s
+        };
     </script>
 </head>
 <body dir='rtl'>
     <nav>
-        <div class='links'>
+        <div id='links' class='links'>
             <div id='up' class='link' onclick='scrollActivate(0)'>חזרה למעלה</div>
-            <script>if(mobile) document.getElementById('up').style.display='none';</script>
             <div class='link' onclick='scrollActivate(50)'>לצפייה בטריילר</div>
             <div class='link' onclick='scrollActivate(120)'>על הסרט</div>
             <div class='link' href='#contact'>צור קשר</div>
         </div>
+        <script>if(mobile) document.getElementById('up').style.display='none';</script>
     </nav>
-    <main>
+    <main onscroll='updateLinks()'>
         <div id='top' class='banner'>
             <img class='bannerText' src='banner-text.png'></img>
             <a id='trailer' name='trailer'></a>
-            <iframe class='video' src="https://drive.google.com/file/d/1mLzm4CKGrE-SBduEKOjvTOg5-F1pP-i3/preview"></iframe>
+            <iframe class='video' scrolling='no' allow="autoplay; gyroscope;" allowfullscreen referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5e47fe1a9a28f40015f1198c" title="Embedded content made with Kapwing"></iframe></div>
         </div>
         <div class='content'>
             <hr style='width: 100px;'>

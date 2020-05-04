@@ -41,7 +41,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
-    margin-right: 20vw;
+    margin-right: 22vw;
 }
 .link {
     color: #B02121;
@@ -70,10 +70,12 @@ h1 {
 }
 .video {
     position: absolute;
-    bottom: -7vh;
+    bottom: -9vh;
     right: 20vw;
     width: 35vw;
     height: 20vw;
+    border: 0;
+    box-shadow: 0 0.1rem 0.6rem #000;
 }
 .content {
     position: static;
