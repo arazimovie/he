@@ -77,15 +77,14 @@
     </main>
     <script>
         var hide={'HE':'EN','EN':'HE'};
-        function showHide(id,lang){
-            document.querySelector('#'+id+hide[lang]).style.display='none';
-            document.querySelector('#'+id+lang).style.display='flex';
+        var language='';
+        function show(id){
+            document.querySelector('#'+id+language).style.display='flex';
         }
         function setLang(lang){
-            if(!lang || !lang.length) lang='HE';
-            showHide('links',lang);
-            showHide('content',lang);
-            if(mobile) document.querySelector('#up'+lang).style.display='none';
+            language=lang;
+            show('links'); show('content');
+            if(!mobile) show('up');
             let bannerText=document.querySelector('#bannerText');
             bannerText.src='banner-text'+lang+'.png';
             if(lang==='EN') bannerText.classList.add('EN');
