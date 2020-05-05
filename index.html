@@ -27,22 +27,34 @@
     </script>
 </head>
 <body dir='rtl'>
-    <nav>
-        <div id='links' class='links'>
-            <div id='up' class='link' onclick='scrollActivate(0)'>חזרה למעלה</div>
-            <div class='link' onclick='scrollActivate(50)'>לצפייה בטריילר</div>
-            <div class='link' onclick='scrollActivate(120)'>על הסרט</div>
-            <div class='link' href='#contact'>צור קשר</div>
+    <div id='chooseLang'>
+        <div class='choose'><div>בחר את השפה שלך:</div><div dir='ltr'>Choose your language:</div></div>
+        <div class='buttons'>
+            <div class='chooseButton' onclick='setLang("HE")'>עברית</div>
+            <div class='chooseButton' onclick='setLang("EN")'>English</div>
         </div>
-        <script>if(mobile) document.getElementById('up').style.display='none';</script>
+    </div>
+    <nav>
+        <div id='linksHE'>
+            <a href='javascript:scrollActivate(0)' id='upHE'>חזרה למעלה</a>
+            <a href='javascript:scrollActivate(50)'>לצפייה בטריילר</a>
+            <a href='javascript:scrollActivate(120)'>על הסרט</a>
+            <a href='javascript:scrollActivate(200)'>צור קשר</a>
+        </div>
+        <div id='linksEN'>
+            <a href='javascript:scrollActivate(0)' id='upEN'>Back to Top</a>
+            <a href='javascript:scrollActivate(50)'>Trailer</a>
+            <a href='javascript:scrollActivate(120)'>About</a>
+            <a href='javascript:scrollActivate(200)'>Contact</a>
+        </div>
     </nav>
     <main onscroll='updateLinks()'>
         <div id='top' class='banner'>
-            <img class='bannerText' src='banner-text.png'></img>
+            <img id='bannerText'></img>
             <a id='trailer' name='trailer'></a>
             <iframe class='video' scrolling='no' allow="autoplay; gyroscope;" allowfullscreen referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5e47fe1a9a28f40015f1198c" title="Embedded content made with Kapwing"></iframe></div>
         </div>
-        <div class='content'>
+        <div id='contentHE'>
             <hr style='width: 100px;'>
             <h1 id='about'>על הסרט</h1>
             <div class='text'>
@@ -52,6 +64,33 @@
                 <p>"אין לי זמן למות" ינסה להחיות את קולו של ארזי, שהונצח ב1949 בעדויות  שמסרו הוא וחבריו ל"הגנה" ונשתמרו בארכיונים.</p>
             </div>
         </div>
+        <div id='contentEN'>
+            <hr style='width: 100px;'>
+            <h1 id='about'>About the Movie</h1>
+            <div class='text'>
+                <p>שישים שנה חלפו מאז אמר בן-גוריון: <b>"אם צה״ל עמד בנצחון במלחמת הקוממיות, מעטים נגד מרובים, יש ליהודה ארזי חלק לא קטן בפלא-אדירים זה״</b>. דמותו של ארזי נמוגה מהזיכרון הקולקטיבי, ונותרה שמורה בארכיונים.</p>
+                <p><b>יהודה ארזי</b> היה מגוייס כל כולו לרכש ולהעפלה. כמחצית מכמות הנשק שהיתה לכוחותנו במלחמת השחרור הגיעה דרכו. הוא הוציא מאיטליה 20 ספינות מעפילים ועליהן כ26,000 יהודים משארית הפליטה.</p>
+                <p>ארזי היה גבר יפה תואר, ואמיץ באופן יוצא דופן.  מלך התחבולות, הוא פעל תמיד על פי צו מצפונו ולא נכנע להוראות הממונים עליו. סיפורו האישי הוא גם סיפורה של הקמת המדינה שבדרך. סיפור שאין דומה לו בהיסטוריית העמים: עם קם לתחייה וחוזר למולדתו לאחר 2000 שנות גלות.</p>
+                <p>"אין לי זמן למות" ינסה להחיות את קולו של ארזי, שהונצח ב1949 בעדויות  שמסרו הוא וחבריו ל"הגנה" ונשתמרו בארכיונים.</p>
+            </div>
+        </div>
     </main>
+    <script>
+        var hide={'HE':'EN','EN':'HE'};
+        function showHide(id,lang){
+            document.querySelector('#'+id+hide[lang]).style.display='none';
+            document.querySelector('#'+id+lang).style.display='flex';
+        }
+        function setLang(lang){
+            if(!lang || !lang.length) lang='HE';
+            showHide('links',lang);
+            showHide('content',lang);
+            if(mobile) document.querySelector('#up'+lang).style.display='none';
+            let bannerText=document.querySelector('#bannerText');
+            bannerText.src='banner-text'+lang+'.png';
+            if(lang==='EN') bannerText.classList.add('EN');
+            document.querySelector('#chooseLang').style.display='none';
+        };
+    </script>
 </body>
 </html>
